@@ -19,11 +19,13 @@ const getFenty = () => {
       const nameEl = document.createElement('li')
       const description = document.createElement('li')
       const price = document.createElement('li')
-      
+      const image = document.createElement('img')
+
 
       nameEl.innerHTML = item.name
       description.innerHTML = item.description
       price.innerHTML = item.price
+      image.src = item.image_link
 
       
         // `
@@ -38,7 +40,7 @@ const getFenty = () => {
         // create image
       
 
-    listItem.append(nameEl, description, price)
+    listItem.append(nameEl, description, price, image)
     root.appendChild(listItem)
 
     }))
